@@ -22,13 +22,25 @@
     top: -313px;
 }
 
+
 .dc3 {
-    width: 672.034px;
-    height: 672.034px;
-    background: rgba(152, 180, 168, 0.60);
-    filter: blur(333.35040283203125px);
-    left: calc(50% - 366px);
-    top: 277px;
+    width: 709px;
+    height: 1642px;
+    top: 0;
+    right: calc(50% - 670px - 609px);
+    border-radius: 1642px;
+    background: rgba(152, 180, 168, 0.20);
+    filter: blur(199.99996948242188px);
+}
+
+.dc3-v2 {
+    width: 766px;
+    height: 811px;
+    border-radius: 811px;
+    background: rgba(152, 180, 168, 0.20);
+    filter: blur(199.99996948242188px);
+    left: calc(50% - 1275px);
+    bottom: 127px;
 }
 
 .dc3-mob {
@@ -80,17 +92,67 @@
 
 
 .dc10 {
-    width: 1440px;
-    height: 96px;
-    border-radius: 1440px;
-    background: #98B4A8;
-    filter: blur(199.99996948242188px);
+    // border-radius: 1110px;
+    // background: #1D2220;
+    // box-shadow: 0px 0px 250px 150px #232A27;
     left: calc(50% - 248px);
-    top: auto;
+
+    top: -0;
     z-index: 5;
+
+
+    width: 1922px;
+    height: 700px;
+    border-radius: 300px;
+    background: radial-gradient(ellipse at 50% 50%, #232A27 0%, rgba(35, 42, 39, 0.00) 70%, rgba(35, 42, 39, 0.00) 100%);
+
+
 }
 
+.dc11-big {
+    border-radius: 1064px;
+    background: rgba(152, 180, 168, 0.20);
+    filter: blur(199.99996948242188px);
+    width: 842px;
+    height: 1064px;
+    left: 0;
+    top: -290px;
+}
 
+.dc12-big {
+    width: 410px;
+    height: 588px;
+    right: 0;
+    top: -122px;
+    border-radius: 588px;
+    background: rgba(152, 180, 168, 0.20);
+    filter: blur(199.99996948242188px);
+}
+
+@media only screen and (max-width: 2000px) {
+
+
+    .dc3 {
+        width: 672.034px;
+        height: 672.034px;
+        background: rgba(152, 180, 168, 0.60);
+        filter: blur(333.35040283203125px);
+        right: calc(50% - 366px);
+        top: 277px;
+    }
+
+    .dc3-v2 {
+        display: none;
+    }
+
+    .dc11-big {
+        display: none;
+    }
+
+    .dc12-big {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 1440px) {
     .dc4 {
@@ -178,6 +240,27 @@
             display: none;
         }
     }
+
+    .dc10 {
+        display: none;
+    }
+
+    .dc6 {
+        display: none;
+    }
+
+    .dc9 {
+        display: none;
+    }
+
+    .dc5 {
+        display: none;
+    }
+
+    .dc7 {
+        display: none;
+    }
+
 
 
 

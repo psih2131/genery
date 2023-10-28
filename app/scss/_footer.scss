@@ -101,6 +101,13 @@
         /* 112.5% */
         letter-spacing: -0.32px;
     }
+
+    .footer__list-link {
+        &:hover {
+            color: $white;
+            transition: all ease 0.3s;
+        }
+    }
 }
 
 .footer__col3 {
@@ -110,6 +117,12 @@
 .footer__networks {
     display: block;
     margin-bottom: 23px;
+    transition: all ease 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: all ease 0.3s;
+    }
 
     svg {
         display: block;
@@ -193,9 +206,15 @@
     bottom: 16px;
     right: 16px;
     display: block;
+    transition: all ease 0.3s;
 
     svg {
         display: block;
+    }
+
+    &:hover {
+        transform: rotate(45deg);
+        transition: all ease 0.3s;
     }
 }
 

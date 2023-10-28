@@ -364,6 +364,11 @@ window.addEventListener('load', function () {
 
             let movableElement = controlElement;
 
+            let bodyContainerWidth = element.offsetWidth
+            let oneProcent = bodyContainerWidth / 100
+
+            console.log(bodyContainerWidth, oneProcent)
+
             movableElement.addEventListener("touchstart", function (event) {
                 isDragging = true;
                 startX = event.touches[0].clientX;
@@ -371,7 +376,7 @@ window.addEventListener('load', function () {
                 event.preventDefault();
             });
 
-            document.addEventListener("touchend", function () {
+            document.addEventListener("touchend", function (event) {
                 isDragging = false;
             });
 
@@ -379,10 +384,8 @@ window.addEventListener('load', function () {
                 if (isDragging) {
                     var deltaX = event.touches[0].clientX - startX;
                     var newLeft = movableElement.offsetLeft + deltaX;
-                    movableElement.style.left = newLeft + "px";
-
                     let currentWidth = startX - distanceFromLeftElement;
-                    activeElement.style.width = currentWidth + 'px';
+
 
                     if (currentWidth >= controlElementWidth - 40) {
                         currentWidth = controlElementWidth - 50;
@@ -391,12 +394,25 @@ window.addEventListener('load', function () {
                         currentWidth = 30;
                         movableElement.style.left = 28 + "px";
                     } else {
-                        activeElement.style.width = currentWidth + 'px';
+                        let currentProcent = newLeft / oneProcent
+                        activeElement.style.width = currentProcent + '%';
                         startX = event.touches[0].clientX;
                         movableElement.style.left = newLeft + "px";
                     }
                 }
+
+
             });
+
+
+
+            // document.addEventListener("touchend", function (event) {
+            //     let leftSize = controlElement.style.left
+            //     let startX = event;
+
+            //     console.log(leftSize, startX.target.offsetLeft)
+            //     activeElement.style.width = leftSize + 'px';
+            // });
         });
     }
 
@@ -460,6 +476,11 @@ window.addEventListener('load', function () {
         breakpoints: {
             // when window width is >= 320px
             320: {
+                spaceBetween: 14,
+                slidesPerView: 3,
+            },
+
+            410: {
                 spaceBetween: 20,
                 slidesPerView: 3,
             },
@@ -472,6 +493,10 @@ window.addEventListener('load', function () {
             750: {
                 spaceBetween: 20,
                 slidesPerView: 3,
+            },
+            980: {
+                spaceBetween: 20,
+                slidesPerView: 4,
             },
             // when window width is >= 1150
             1150: {
@@ -535,6 +560,7 @@ window.addEventListener('load', function () {
             slidesPerView: "auto",
             initialSlide: 1,
             autoHeight: false,
+            spaceBetween: 32,
         });
     }
     else if (mediaQuery750.matches) {

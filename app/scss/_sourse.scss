@@ -107,7 +107,7 @@ ul {
 
 .app {
 
-	min-width: 260px;
+	min-width: 300px;
 }
 
 .container {
@@ -132,12 +132,46 @@ ul {
 
 @media only screen and (max-width: 1150px) {
 	.container {
+		width: 964px;
+	}
+}
+
+@media only screen and (max-width: 990px) {
+	.container {
 		width: 684px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
 @media only screen and (max-width: 750px) {
 	.container {
-		width: 358px;
+		width: 398px;
 	}
+}
+
+@media only screen and (max-width: 435px) {
+	.container {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media only screen and (max-width: 410px) {
+	.container {
+		width: 358px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+@media only screen and (max-width: 385px) {
+	.container {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+
 }
